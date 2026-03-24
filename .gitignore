@@ -1,3 +1,9 @@
 .DS_Store
 node_modules/
 *.log
+
+# Secrets — never commit real keys
+.env
+.env.local
+.env.production
+.env.*.local
