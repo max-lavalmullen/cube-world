@@ -330,6 +330,7 @@
       label: "Whip",
       series: "Series 1",
       description: "Enjoys rope tricks",
+      theme: "rope",
       shellGlow: "#f2d73d",
       shellDeep: "#c39712",
       gameName: "Jump Rope",
@@ -3097,6 +3098,14 @@
       occupants.forEach((agent) => this.drawAgent(context, agent));
       if (cube.soundOn) {
         this.drawMusicNote(context, 112, 18);
+      }
+      const resident = this.getResident(cube.id);
+      if (resident) {
+        context.save();
+        context.fillStyle = "rgba(32, 37, 31, 0.6)";
+        context.font = '8px "Trebuchet MS", sans-serif';
+        context.fillText(resident.currentActivity, 6, SCREEN_SIZE - 5);
+        context.restore();
       }
       this.drawBlind(context, cube.blindAmount);
       this.drawEdgePulses(context, cube);
