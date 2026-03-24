@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cube.world prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="world-view">
+      <aside class="builder-dock" aria-label="Builder">
+        <button
+          id="add-cube-trigger"
+          class="dock-button"
+          type="button"
+          title="Add cube"
+          aria-label="Add cube"
+        >
+          +
+        </button>
+        <button
+          id="add-furniture-trigger"
+          class="dock-button"
+          type="button"
+          title="Add furniture to the selected cube"
+          aria-label="Add furniture"
+        >
+          []
+        </button>
+        <button
+          id="reset-world-trigger"
+          class="dock-button dock-button-reset"
+          type="button"
+          title="Reset the world"
+          aria-label="Reset the world"
+        >
+          R
+        </button>
+      </aside>
+
+      <section class="world-table">
+        <div id="world-stage" class="world-stage" aria-label="Connected cubes"></div>
+      </section>
+
+      <section id="cube-picker" class="picker hidden" aria-hidden="true">
+        <div class="picker-panel">
+          <h2>Add Cube</h2>
+          <div id="cube-option-grid" class="option-grid"></div>
+        </div>
+      </section>
+
+      <section id="furniture-picker" class="picker hidden" aria-hidden="true">
+        <div class="picker-panel">
+          <h2>Add Furniture</h2>
+          <div id="furniture-option-grid" class="option-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
